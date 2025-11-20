@@ -1,0 +1,2996 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="iso-8859-1" />
+<meta name="generatedBy" content="REMUS" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/stylesheets/remus.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/stylesheets/madeja.css" />
+<title>Proyecto REM RSI DADIX</title>
+<script>
+            // array for user warnings
+            var warnings = new Array();
+        </script>
+</head>
+<body>
+<div id="warning_container" class="ui-widget">
+<span id="warning_title">Avisos</span>
+<div id="warning_messages"></div>
+</div>
+<div id="document_cover">
+<div id="browser_info">
+<script>
+                document.write( navigator.userAgent );
+            </script>
+</div>
+<div id="project_name">Proyecto REM RSI DADIX</div>
+<div id="document_logo">
+<img alt="Universidad de Sevilla" src="https://cdn.jsdelivr.net/gh/amador-duran-toro/rem/assets/images/logo_us.gif" />
+</div>
+<div id="document_name">Documento de Requisitos del Sistema</div>
+<div id="document_version">Versión 1.0</div>
+<div id="document_date">Fecha 10/11/2025</div>
+<div id="document_prepared_for">Preparado para:<p>
+<a href="#ORG-0001">Dadix</a>
+</p>
+</div>
+<div id="document_prepared_by">Preparado por:<p>
+<a href="#ORG-0002">GSI</a>
+</p>
+</div>
+</div>
+<div class="pagebreak"></div>
+<nav id="toc" role="navigation">
+<h1>Índice</h1>
+<ul class="toc_list toc_list_level_1">
+<li>1 <a href="#SEC-0005">Caso de Negocio: Plataforma de interacción</a></li>
+<ul class="toc_list">
+<li>1.1 <a href="#SEC-0006">Presentación y Análisis</a></li>
+<li>1.2 <a href="#SEC-0007">Objetivos</a></li>
+<li>1.3 <a href="#SEC-0008">Riesgos</a></li>
+</ul>
+<li>2 <a href="#SEC-0009">Participantes del proyecto</a></li>
+<ul class="toc_list">
+<li>2.1 <a href="#SEC-0001">DADIX</a></li>
+<li>2.2 <a href="#SEC-0002">GSI EQUIPO</a></li>
+</ul>
+<li>3 <a href="#SEC-0011">Requisitos del Sistema</a></li>
+<ul class="toc_list">
+<li>3.1 <a href="#SEC-0010">Requisitos de información</a></li>
+<li>3.2 <a href="#SEC-0012">Requisitos funcionales</a></li>
+<li>3.3 <a href="#SEC-0013">Reglas de negocio</a></li>
+<li>3.4 <a href="#SEC-0014">Casos de uso</a></li>
+<ul class="toc_list">
+<li>3.4.1 <a href="#SEC-0004">Actores</a></li>
+</ul>
+</ul>
+</ul>
+</nav>
+<div class="pagebreak"></div>
+<h1 id="SEC-0005" class="section">1 Caso de Negocio: Plataforma de interacción</h1>
+<h2 id="SEC-0006" class="section">1.1 Presentación y Análisis</h2>
+<div id="GLO-0001" class="glo">
+<div id="GLO-0001-text-html" class=""><p><strong>Presentación - Resumen del documento</strong>: Este documento detalla los requerimientos necesarios para implementar una plataforma de interacción y comunicación en la empresa Dadix. El propósito principal es facilitar una mejor organización y potenciar la comunicación interna entre los empleados de la compañía.</p></div>
+</div>
+<div id="GLO-0002" class="glo">
+<div id="GLO-0002-text-html" class=""><p><strong>Misión y visión</strong>: La misión de esta plataforma es permitir a los empleados y a la fundadora comunicarse entre sí, colaborar y estar informados.</p>
+<p>La visión de esta plataforma es construir una entorno para que los empleados y la fundadora sientan una unión en la empresa y puedan aportar experiencias, conocimientos y opiniones</p></div>
+</div>
+<div id="GLO-0003" class="glo">
+<div id="GLO-0003-text-html" class=""><p><strong>Análisis DAFO</strong>: Debilidades: presupuesto limitado, dependencia del administrador para la mayoría de las tareas, falta de promociones</p>
+<p>Amenazas: competencia en el sector educativo y de experiencias, dependencia del público joven, riesgo en eventos con poca asistencia</p>
+<p>Fortalezas: oferta variada y sólida de servicios, equipo de profesores amplio y especializado, política clara y definida, instalaciones adecuadas y bien equipadas</p>
+<p>Oportunidades: crecimiento del interés por el baile urbano, potencial de colaboración con artistas invitados, posicionamiento como espacio cultural urbano, fidelización mediante comunidad</p></div>
+</div>
+<h2 id="SEC-0007" class="section">1.2 Objetivos</h2>
+<div id="OBJ-0001">
+<table class="objective remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/objective.png" /> OBJ-0001</th>
+<th class="name_column" colspan="1">Mejorar la comunicación interna</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="OBJ-0001-description-html" class=""><p>El sistema deberá Centralizar toda la comunicación entre administradora y empleados.   <br />
+Reducir la dependencia de WhatsApp, correos dispersos o conversaciones informales.</p>
+<p>Notificaciones claras de tareas, cambios de agenda, novedades y avisos urgentes..</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="OBJ-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="OBJ-0002">
+<table class="objective remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/objective.png" /> OBJ-0002</th>
+<th class="name_column" colspan="1">Simplificar la gestión administrativa</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="OBJ-0002-description-html" class=""><p>El sistema deberá implementar una gestión administrativa más simplificada y reducir la complejidad para que los empleados que vayan a usar la plataforma puedan usarla sin complicaciones ni estudio previo.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="OBJ-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="OBJ-0003">
+<table class="objective remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/objective.png" /> OBJ-0003</th>
+<th class="name_column" colspan="1">Crear un entorno de equipo sólido y participativo</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="OBJ-0003-description-html" class=""><p>El sistema deberá Espacios para sugerencias, feedback interno y votaciones, cultura de mejora continua y comunicación transparente, aumento del sentido de pertenencia y motivación del equipo..</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="OBJ-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="OBJ-0004">
+<table class="objective remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/objective.png" /> OBJ-0004</th>
+<th class="name_column" colspan="1">Optimizar tiempos y reducir errores</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="OBJ-0004-description-html" class=""><p>El sistema deberá Automatizar procesos recurrentes ,estandarizar flujos internos para que todos trabajen igual y facilitar a la administradora el control global de la escuela.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="OBJ-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="OBJ-0005">
+<table class="objective remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/objective.png" /> OBJ-0005</th>
+<th class="name_column" colspan="1">Aumentar la transparencia y la autonomía del equipo</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="OBJ-0005-description-html" class=""><p>El sistema deberá Contener información accesible para todos sin depender de preguntar cada día a la administradora, tareas asignadas y responsables claramente visibles, reducción del estrés por carga administrativa o comunicaciones perdidas.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="OBJ-0005-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="SEC-0008" class="section">1.3 Riesgos</h2>
+<div id="NFR-0001">
+<table class="nonfunctional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/nonFunctionalRequirement.png" /> NFR-0001</th>
+<th class="name_column" colspan="1">Saturación de notificaciones</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="NFR-0001-description-html" class=""><p>El sistema deberá Permitir configurar la frecuencia y relevancia de las notificaciones,   <br />
+ya que existe el riesgo de que los empleados se saturen y dejen de atender los avisos importantes.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="NFR-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="NFR-0002">
+<table class="nonfunctional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/nonFunctionalRequirement.png" /> NFR-0002</th>
+<th class="name_column" colspan="1">Acceso no autorizado a información sensible</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="NFR-0002-description-html" class=""><p>El sistema deberá Implementar permisos estrictos y diferenciados según roles,   <br />
+ya que existe el riesgo de que usuarios sin autorización accedan a documentos internos o datos personales.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="NFR-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="NFR-0003">
+<table class="nonfunctional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/nonFunctionalRequirement.png" /> NFR-0003</th>
+<th class="name_column" colspan="1">Información desactualizada</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="NFR-0003-description-html" class=""><p>El sistema deberá Facilitar la actualización rápida y obligatoria de datos clave (horarios, incidencias, disponibilidades),   <br />
+ya que existe el riesgo de que los empleados no actualicen información y se produzcan errores en la organización del trabajo.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="NFR-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="NFR-0004">
+<table class="nonfunctional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/nonFunctionalRequirement.png" /> NFR-0004</th>
+<th class="name_column" colspan="1">Sobrecarga operativa sobre la administradora</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="NFR-0004-description-html" class=""><p>El sistema deberá Repartir responsabilidades y permitir que ciertos procesos sean actualizados por los propios empleados,   <br />
+ya que existe el riesgo de que toda la gestión recaiga únicamente en la administradora.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="NFR-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="NFR-0005">
+<table class="nonfunctional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/nonFunctionalRequirement.png" /> NFR-0005</th>
+<th class="name_column" colspan="1">No adopción por parte del equipo</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="NFR-0005-description-html" class=""><p>El sistema deberá Ser fácil de usar y requerir muy poca formación,   <br />
+ya que existe el riesgo de que los empleados no lo utilicen y vuelvan a canales informales como WhatsApp.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="NFR-0005-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<h1 id="SEC-0009" class="section">2 Participantes del proyecto</h1>
+<h2 id="SEC-0001" class="section">2.1 DADIX</h2>
+<div id="ORG-0001">
+<table class="organization remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/organization.png" /> Organización</th>
+<th class="name_column" colspan="1">Dadix</th>
+</tr>
+</thead>
+<tr>
+<th>Dirección</th>
+<td colspan="1">
+<div id="ORG-0001-address-html" class=""><p>EMPRESA</p></div>
+</td>
+</tr>
+<tr>
+<th>Teléfono</th>
+<td colspan="1">619818561</td>
+</tr>
+<tr>
+<th>Fax</th>
+<td colspan="1">dadix@gmail.com</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="ORG-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="STK-0001">
+<table class="stakeholder remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/stakeholder.png" /> Participante</th>
+<th class="name_column" colspan="1">Abie</th>
+</tr>
+</thead>
+<tr>
+<th>Organización</th>
+<td>
+<a href="#ORG-0001">Dadix</a>
+</td>
+</tr>
+<tr>
+<th>Rol</th>
+<td colspan="1">
+<span id="STK-0001-stakeholderRole-html" class="">Administrador</span>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="STK-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="SEC-0002" class="section">2.2 GSI EQUIPO</h2>
+<div id="STK-0002">
+<table class="stakeholder remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/stakeholder.png" /> Participante</th>
+<th class="name_column" colspan="1">David Real</th>
+</tr>
+</thead>
+<tr>
+<th>Organización</th>
+<td>
+<a href="#ORG-0002">GSI</a>
+</td>
+</tr>
+<tr>
+<th>Rol</th>
+<td colspan="1">
+<span id="STK-0002-stakeholderRole-html" class="">Desarrollador</span>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="STK-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="STK-0003">
+<table class="stakeholder remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/stakeholder.png" /> Participante</th>
+<th class="name_column" colspan="1">Mario Ramos</th>
+</tr>
+</thead>
+<tr>
+<th>Organización</th>
+<td>
+<a href="#ORG-0002">GSI</a>
+</td>
+</tr>
+<tr>
+<th>Rol</th>
+<td colspan="1">
+<span id="STK-0003-stakeholderRole-html" class="">Desarrollador</span>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="STK-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="STK-0004">
+<table class="stakeholder remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/stakeholder.png" /> Participante</th>
+<th class="name_column" colspan="1">Juan Manzano</th>
+</tr>
+</thead>
+<tr>
+<th>Organización</th>
+<td>
+<a href="#ORG-0002">GSI</a>
+</td>
+</tr>
+<tr>
+<th>Rol</th>
+<td colspan="1">
+<span id="STK-0004-stakeholderRole-html" class="">Desarrollador</span>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="STK-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="STK-0005">
+<table class="stakeholder remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/stakeholder.png" /> Participante</th>
+<th class="name_column" colspan="1">Adrián Sánchez</th>
+</tr>
+</thead>
+<tr>
+<th>Organización</th>
+<td>
+<a href="#ORG-0002">GSI</a>
+</td>
+</tr>
+<tr>
+<th>Rol</th>
+<td colspan="1">
+<span id="STK-0005-stakeholderRole-html" class="">Desarrollador</span>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="STK-0005-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="ORG-0002">
+<table class="organization remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/organization.png" /> Organización</th>
+<th class="name_column" colspan="1">GSI</th>
+</tr>
+</thead>
+<tr>
+<th>Dirección</th>
+<td colspan="1">
+<div id="ORG-0002-address-html" class=""><p>EMPRESA</p></div>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="ORG-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<h1 id="SEC-0011" class="section">3 Requisitos del Sistema</h1>
+<h2 id="SEC-0010" class="section">3.1 Requisitos de información</h2>
+<div id="IRQ-0001">
+<table class="information_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/informationRequirement.png" /> IRQ-0001</th>
+<th class="name_column" colspan="2">Roles de la plataforma</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2">
+<div id="IRQ-0001-relevantConcept-html" class="relevant_concept"><p>El sistema deberá almacenar la información correspondiente a los roles que deben haber en la plataforma. En concreto:</p></div>
+</td>
+</tr>
+<tr>
+<th>Datos específicos</th>
+<td colspan="2">
+<ul class="specific_data">
+<li id="DAT-0038">
+<span id="DAT-0038-description-html" class="">Administrador</span>
+</li>
+<li id="DAT-0039">
+<span id="DAT-0039-description-html" class="">Profesor</span>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="IRQ-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="IRQ-0003">
+<table class="information_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/informationRequirement.png" /> IRQ-0003</th>
+<th class="name_column" colspan="2">Canal General</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2">
+<div id="IRQ-0003-relevantConcept-html" class="relevant_concept"><p>El sistema deberá almacenar la información correspondiente a el canal general. En concreto:</p></div>
+</td>
+</tr>
+<tr>
+<th>Datos específicos</th>
+<td colspan="2">
+<ul class="specific_data">
+<li id="DAT-0041">
+<span id="DAT-0041-description-html" class="">Ideas de negocio</span>
+</li>
+<li id="DAT-0042">
+<span id="DAT-0042-description-html" class="">Opiniones</span>
+</li>
+<li id="DAT-0043">
+<span id="DAT-0043-description-html" class="">Propuestas y encuestas</span>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="IRQ-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="IRQ-0002">
+<table class="information_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/informationRequirement.png" /> IRQ-0002</th>
+<th class="name_column" colspan="2">Canal Administradción</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2">
+<div id="IRQ-0002-relevantConcept-html" class="relevant_concept"><p>El sistema deberá almacenar la información correspondiente a el canal de admnistración, el cual solo tendrá acceso el administrador. En concreto:</p></div>
+</td>
+</tr>
+<tr>
+<th>Datos específicos</th>
+<td colspan="2">
+<ul class="specific_data">
+<li id="DAT-0040">
+<span id="DAT-0040-description-html" class="">Datos contables</span>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="IRQ-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="IRQ-0004">
+<table class="information_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/informationRequirement.png" /> IRQ-0004</th>
+<th class="name_column" colspan="2">Canal Gestión Académica</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2">
+<div id="IRQ-0004-relevantConcept-html" class="relevant_concept"><p>El sistema deberá almacenar la información correspondiente a el canal Gestión Académica. En concreto:</p></div>
+</td>
+</tr>
+<tr>
+<th>Datos específicos</th>
+<td colspan="2">
+<ul class="specific_data">
+<li id="DAT-0044">
+<span id="DAT-0044-description-html" class="">Alumnos matriculados</span>
+</li>
+<li id="DAT-0046">
+<span id="DAT-0046-description-html" class="">Horarios</span>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="IRQ-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="IRQ-0005">
+<table class="information_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/informationRequirement.png" /> IRQ-0005</th>
+<th class="name_column" colspan="2">Canal Formación Profesores</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2">
+<div id="IRQ-0005-relevantConcept-html" class="relevant_concept"><p>El sistema deberá almacenar la información correspondiente a el canal Formación Profesores. En concreto:</p></div>
+</td>
+</tr>
+<tr>
+<th>Datos específicos</th>
+<td colspan="2">
+<ul class="specific_data">
+<li id="DAT-0047">
+<span id="DAT-0047-description-html" class="">Misión de la empresa</span>
+</li>
+<li id="DAT-0048">
+<span id="DAT-0048-description-html" class="">Visión de la empresa</span>
+</li>
+<li id="DAT-0049">
+<span id="DAT-0049-description-html" class="">Valores de a empresa</span>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="IRQ-0005-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="SEC-0012" class="section">3.2 Requisitos funcionales</h2>
+<div id="FRQ-0001">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0001</th>
+<th class="name_column" colspan="1">Creación de documentos</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0001-description-html" class=""><p>El sistema deberá permitir que el administrador cree/suba documentos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0002">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0002</th>
+<th class="name_column" colspan="1">Gestión de documentos</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0002-description-html" class=""><p>El sistema deberá tener un gestor de documentos para poder acceder fácil e intuitivamente a ellos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0003">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0003</th>
+<th class="name_column" colspan="1">Creación de canales nuevos</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0003-description-html" class=""><p>El sistema deberá tener la opción de que el administrador pueda crear nuevos canales.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0004">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0004</th>
+<th class="name_column" colspan="1">Atribución de canales</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0004-description-html" class=""><p>El sistema deberá restringir que los roles no puedan acceder a un canal que no se le haya atribuido.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0005">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0005</th>
+<th class="name_column" colspan="1">Reuniones</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0005-description-html" class=""><p>El sistema deberá permitir que los empleados y la fundadora puedan unirse mediante una reunión.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0005-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0006">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0006</th>
+<th class="name_column" colspan="1">Programación de reuniones</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0006-description-html" class=""><p>El sistema deberá permitir crear nuevas reuniones y programarlas para un futuro.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0006-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0007">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0007</th>
+<th class="name_column" colspan="1">Gestión de notificaciones</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0007-description-html" class=""><p>El sistema deberá notificar a los empleados cuando se publique algo, además, los empleados deben poder desactivar las notificaciones y gestionarlas a su gusto.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">quedaría bien</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0007-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0008">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0008</th>
+<th class="name_column" colspan="1">Balance contable</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0008-description-html" class=""><p>El sistema deberá permitir mediante un excel acceder a los datos contables.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0008-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0009">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0009</th>
+<th class="name_column" colspan="1">Edición de matriculas</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0009-description-html" class=""><p>El sistema deberá permitir editar, crear, y eliminar elementos de una lista (matrículas).</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0009-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0010">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0010</th>
+<th class="name_column" colspan="1">Creación de encuestas</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0010-description-html" class=""><p>El sistema deberá permitir crear encuestas para que los empleados influyan en las decisiones de una manera democrática.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">quedaría bien</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0010-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0011">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0011</th>
+<th class="name_column" colspan="1">Documento de texto</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0011-description-html" class=""><p>El sistema deberá tener la opción de crear un documentos de texto.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0011-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="SEC-0013" class="section">3.3 Reglas de negocio</h2>
+<div id="CRQ-0002">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0002</th>
+<th class="name_column" colspan="1">Creación y gestión de documentos</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0002-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: el administrador será quien pueda crear y gestionar los documentos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0001">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0001</th>
+<th class="name_column" colspan="1">Creación y gestión de canales, roles</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0001-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: el administrador será quién pueda crear, gestionar los canales y atribuir roles a ellos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0003">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0003</th>
+<th class="name_column" colspan="1">Creación y programación de reuniones</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0003-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados podrán crear y programar reuniones.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0004">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0004</th>
+<th class="name_column" colspan="1">Canal General</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0004-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados podrán acceder al canal General y crear o subir documentos en él.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0005">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0005</th>
+<th class="name_column" colspan="1">Canal Administración</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0005-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: únicamente el administrador tendrá acceso al canal Administración.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0005-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0006">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0006</th>
+<th class="name_column" colspan="1">Canal Gestión Académica</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0006-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados tendrán acceso a el canal Gestión Académica, pero únicamente el administrador podrá crear, editar y eliminar documentos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0006-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0007">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0007</th>
+<th class="name_column" colspan="1">Canal Formación Profesores</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0007-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados tendrán acceso a el canal Gestión Académica, pero únicamente el administrador podrá crear, editar y eliminar documentos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0007-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0008">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0008</th>
+<th class="name_column" colspan="1">Creación de encuestas</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0008-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados podrán crear y participar en encuestas en el canal general.</p></div>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0008-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="CRQ-0009">
+<table class="constraint_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0009</th>
+<th class="name_column" colspan="1">Creación y asignación de tareas</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="CRQ-0009-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: únicamente el administrador podrá crear y asignar tareas.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="CRQ-0009-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<h2 id="SEC-0014" class="section">3.4 Casos de uso</h2>
+<h3 id="SEC-0004" class="section">3.4.1 Actores</h3>
+<div id="ACT-0001">
+<table class="actor remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/actor.png" /> ACT-0001</th>
+<th class="name_column" colspan="1">Administrador</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (10/11/2025)
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="ACT-0001-actorRole-html" class=""><p>Este actor representa al personal administrativo con permisos completos de lectura/escritura sobre todos los documentos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="ACT-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="ACT-0002">
+<table class="actor remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/actor.png" /> ACT-0002</th>
+<th class="name_column" colspan="1">Profesor</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (10/11/2025)
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="ACT-0002-actorRole-html" class=""><p>Este actor representa los profesores de la empresa que imparten clase. Puede consultar contratos y fichas médicas de sus alumnos (solo lectura).</p></div>
+</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="ACT-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0001">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0001</th>
+<th class="name_column" colspan="2">Gestión de documentos </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0001--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador sube, actualiza o elimina documentos internos.   <br />
+1-El administrador accede al canal donde se encuentra el documento o donde quiere crearlo o subirlo   <br />
+2-Selecciona agregar documento/selecciona un documento existente   <br />
+3-Carga archivo, asigna permisos   <br />
+4-El sistema almacena y lo hace accesible según el rol</p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0001-precondition-html" class=""><p>Deben estar los canales creados y los roles asignados</p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0001-postcondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0002">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0002</th>
+<th class="name_column" colspan="2">Consulta de documentos </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0002--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el empleado accede a documentos internos que le pertenecen o que se relacionan con su rol   <br />
+1-El empleado ve los canales permitidos por su rol   <br />
+2-Accede al canal donde se encuentra el documento   <br />
+3-Descarga o visualiza el documento</p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0002-precondition-html" class=""><p>Deben estar creados los documentos, los canales y los roles asignados</p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0002-postcondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0002-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0003">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0003</th>
+<th class="name_column" colspan="2">Creación de encuestas </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0003--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador o algún empleado crea una encuesta.   <br />
+1-El actor accede al canal general   <br />
+2-Selecciona publicar   <br />
+3-Selecciona la encuesta   <br />
+4-Introduce los datos de la encuesta   <br />
+5-Publica la encuesta</p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0003-precondition-html" class=""><p>El canal General debe estar creado con sus permisos asociados</p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0003-postcondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">hay presión</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0004">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0004</th>
+<th class="name_column" colspan="2">Publicación de horarios </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0004--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador actualiza el horario.   <br />
+1-El administrador accede al canal Gestión Académica   <br />
+2-Selecciona publicar   <br />
+3-Selecciona el horario   <br />
+4-Publica el horario</p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0004-precondition-html" class=""><p>El canal Gestión Académica debe estar creado y sus permisos asociados</p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0004-postcondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0005">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0005</th>
+<th class="name_column" colspan="2">Automatización de notificaciones </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0005--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando se publica o actualiza algun documento.   <br />
+1-El actor crea o actualiza el documento   <br />
+2-El sistema automáticamente envía una notificación a los empleados</p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0005-precondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0005-postcondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">quedaría bien</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">puede esperar</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0005-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0006">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0006</th>
+<th class="name_column" colspan="2">Administración de roles </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (20/11/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0002">David Real</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0006--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando el administrador crea un canal.   <br />
+1-El administrador selecciona administrar equipo   <br />
+2-Selecciona agregar canal/rol   <br />
+3-Crea el canal o rol</p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0006-precondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0006-postcondition-html" class=""><p><span class="tbd" title='Por determinar'>PD</span></p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0006-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+            // set tooltips of rem:ref references to glossary items or class supertypes
+            $( ".rem_ref" ).each( function () {
+                var sharp_position = this.href.lastIndexOf("#");
+                var id_glossary_item = this.href.substring( sharp_position + 1 ) + "-text-html";
+                var id_supertype = this.href.substring( sharp_position + 1 ) + "-description-html";
+
+                // some rem:refs to use cases do not have -text-html elements
+                if ( document.getElementById( id_glossary_item ) )
+                    this.title = document.getElementById( id_glossary_item ).innerText;
+
+                else if ( document.getElementById( id_supertype ) )
+                    this.title = document.getElementById( id_supertype ).innerText;
+            });
+
+            // set tooltips of rem:tbd elements
+            $( ".tbd" ).each( function () {
+                this.title = 'Por determinar';
+            });
+
+            // show warnings (if any)
+            if ( warnings.length ) {
+                var warning_list = $("<ul></ul>");
+                for ( var i = 0; i < warnings.length; i++ ) {
+                    var warning = warnings[ i ];
+                    var warning_link = $('<a href="#' + warning.oid + '">' + warning.oid + '</a>' );
+                    var warning_message = ": " + warning.message;
+                    var warning_item = $("<li></li>").append(warning_link, warning_message);
+
+                    warning_list.append( warning_item );
+                }
+                $("#warning_messages").append( warning_list );
+                $("#warning_container").show();
+            }
+
+            // manage traceability matrices buttons
+            function update_font_size( parent_table, size )
+            {
+                var matrix_columns = parent_table.find( "th.matrix_column" );
+                var font_size = parseInt( matrix_columns.eq(0).css( "font-size" ), 10 );
+
+                matrix_columns.css( "font-size", font_size + size );
+            }
+
+            $( "button.reduce_font" ).click( function() {
+                var parent_table = $(this).parents( "table.traceability_matrix" );
+                update_font_size( parent_table, -1 );
+            });
+
+            $( "button.increase_font" ).click( function() {
+                var parent_table = $(this).parents( "table.traceability_matrix" );
+                update_font_size( parent_table, 1 );
+            });
+        </script>
+<script src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/javascripts/ie7-shim-min-width.js"></script>
+<script>
+            fixMinWidthForIE();
+        </script>
+</body>
+</html>
