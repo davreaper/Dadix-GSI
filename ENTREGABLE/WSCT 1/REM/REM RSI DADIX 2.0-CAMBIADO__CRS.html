@@ -1851,6 +1851,182 @@ ya que existe el riesgo de que los empleados no lo utilicen y vuelvan a canales 
 </tr>
 </table>
 </div>
+<div id="FRQ-0012">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0012</th>
+<th class="name_column" colspan="1">Sincronización de Balance Contable</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (05/12/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0004">Juan Manzano</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0012-description-html" class=""><p>El sistema deberá  la edición simultánea en la pestaña "Balance Contable". Esto significa que varios usuarios podrán escribir o modificar datos al mismo tiempo, y cualquier cambio se guardará automáticamente en el archivo Excel de la sección "Archivos", sin necesidad de descargarlo ni guardar versiones aparte..</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">en construcción</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0012-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0013">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0013</th>
+<th class="name_column" colspan="1">Gestión de Estados de Tesorería</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (05/12/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0004">Juan Manzano</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0013-description-html" class=""><p>El sistema deberá El sistema deberá gestionar el flujo de cobros mediante tres depósitos (buckets) obligatorios e inalterables por el usuario básico: "Pago Pendiente", "Pago Recibido" y "Pago Verificado (Justificante)". El sistema permitirá mover las tarjetas de alumnos libremente entre estos estados para reflejar su situación financiera actual..</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="1">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">validado</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0013-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="FRQ-0014">
+<table class="functional_requirement remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/functionalRequirement.png" /> FRQ-0014</th>
+<th class="name_column" colspan="1">Integración de Pestaña de Hoja de Cálculo</th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="1">1.0 (05/12/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0004">Juan Manzano</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="1">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="1">
+<div id="FRQ-0014-description-html" class=""><p>El sistema deberá La pestaña "Balance Contable" debe renderizar directamente el archivo Balance Contable.xlsx alojado en la raíz de la carpeta de Archivos. El sistema debe permitir la navegación entre las hojas internas del libro ("Balance General", "Ingresos", "Gastos") sin salir de la interfaz de Teams..</p></div>
+</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="1">puede esperar</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="1">pendiente de verificación</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="1">
+<div id="FRQ-0014-comments-html" class="remus_comments"><p>Verificar que al cambiar de hoja se guarda la vista para el siguiente usuario.</p></div>
+</td>
+</tr>
+</table>
+</div>
 <h2 id="SEC-0013" class="section">3.3 Reglas de negocio</h2>
 <div id="CRQ-0002">
 <table class="constraint_requirement remus_table">
@@ -1964,126 +2140,6 @@ ya que existe el riesgo de que los empleados no lo utilicen y vuelvan a canales 
 <th>Comentarios</th>
 <td colspan="1">
 <div id="CRQ-0001-comments-html" class="remus_comments"><p>Ninguno</p></div>
-</td>
-</tr>
-</table>
-</div>
-<div id="CRQ-0003">
-<table class="constraint_requirement remus_table">
-<thead>
-<tr>
-<th>
-<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0003</th>
-<th class="name_column" colspan="1">Creación y programación de reuniones</th>
-</tr>
-</thead>
-<tr>
-<th>Versión</th>
-<td colspan="1">1.0 (20/11/2025)
-</td>
-</tr>
-<tr>
-<th>Autores</th>
-<td colspan="1">
-<ul class="stakeholders">
-<li>
-<a href="#STK-0002">David Real</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th>Fuentes</th>
-<td colspan="1">
-<ul class="stakeholders">
-<li>
-<a href="#STK-0001">Abie</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th>Descripción</th>
-<td colspan="1">
-<div id="CRQ-0003-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados podrán crear y programar reuniones.</p></div>
-</td>
-</tr>
-<tr>
-<th>Importancia</th>
-<td colspan="1">vital</td>
-</tr>
-<tr>
-<th>Urgencia</th>
-<td colspan="1">hay presión</td>
-</tr>
-<tr>
-<th>Estado</th>
-<td colspan="1">en construcción</td>
-</tr>
-<tr>
-<th>Comentarios</th>
-<td colspan="1">
-<div id="CRQ-0003-comments-html" class="remus_comments"><p>Ninguno</p></div>
-</td>
-</tr>
-</table>
-</div>
-<div id="CRQ-0004">
-<table class="constraint_requirement remus_table">
-<thead>
-<tr>
-<th>
-<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0004</th>
-<th class="name_column" colspan="1">Canal General</th>
-</tr>
-</thead>
-<tr>
-<th>Versión</th>
-<td colspan="1">1.0 (20/11/2025)
-</td>
-</tr>
-<tr>
-<th>Autores</th>
-<td colspan="1">
-<ul class="stakeholders">
-<li>
-<a href="#STK-0002">David Real</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th>Fuentes</th>
-<td colspan="1">
-<ul class="stakeholders">
-<li>
-<a href="#STK-0001">Abie</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th>Descripción</th>
-<td colspan="1">
-<div id="CRQ-0004-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados podrán acceder al canal General y crear o subir documentos en él.</p></div>
-</td>
-</tr>
-<tr>
-<th>Importancia</th>
-<td colspan="1">vital</td>
-</tr>
-<tr>
-<th>Urgencia</th>
-<td colspan="1">inmediatamente</td>
-</tr>
-<tr>
-<th>Estado</th>
-<td colspan="1">en construcción</td>
-</tr>
-<tr>
-<th>Comentarios</th>
-<td colspan="1">
-<div id="CRQ-0004-comments-html" class="remus_comments"><p>Ninguno</p></div>
 </td>
 </tr>
 </table>
@@ -2241,7 +2297,7 @@ ya que existe el riesgo de que los empleados no lo utilicen y vuelvan a canales 
 <tr>
 <th>Descripción</th>
 <td colspan="1">
-<div id="CRQ-0007-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados tendrán acceso a el canal Gestión Académica, pero únicamente el administrador podrá crear, editar y eliminar documentos.</p></div>
+<div id="CRQ-0007-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados tendrán acceso a el canal Formación Profesores, pero únicamente el administrador podrá crear, editar y eliminar documentos.</p></div>
 </td>
 </tr>
 <tr>
@@ -2260,54 +2316,6 @@ ya que existe el riesgo de que los empleados no lo utilicen y vuelvan a canales 
 <th>Comentarios</th>
 <td colspan="1">
 <div id="CRQ-0007-comments-html" class="remus_comments"><p>Ninguno</p></div>
-</td>
-</tr>
-</table>
-</div>
-<div id="CRQ-0008">
-<table class="constraint_requirement remus_table">
-<thead>
-<tr>
-<th>
-<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/constraintRequirement.png" /> CRQ-0008</th>
-<th class="name_column" colspan="1">Creación de encuestas</th>
-</tr>
-</thead>
-<tr>
-<th>Versión</th>
-<td colspan="1">1.0 (20/11/2025)
-</td>
-</tr>
-<tr>
-<th>Autores</th>
-<td colspan="1">
-<ul class="stakeholders">
-<li>
-<a href="#STK-0002">David Real</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th>Fuentes</th>
-<td colspan="1">
-<ul class="stakeholders">
-<li>
-<a href="#STK-0001">Abie</a>
-</li>
-</ul>
-</td>
-</tr>
-<tr>
-<th>Descripción</th>
-<td colspan="1">
-<div id="CRQ-0008-description-html" class=""><p>El sistema deberá respetar la siguiente regla de negocio o restricción: tanto el administrador como los empleados podrán crear y participar en encuestas en el canal general.</p></div>
-</td>
-</tr>
-<tr>
-<th>Comentarios</th>
-<td colspan="1">
-<div id="CRQ-0008-comments-html" class="remus_comments"><p>Ninguno</p></div>
 </td>
 </tr>
 </table>
@@ -3179,6 +3187,151 @@ ya que existe el riesgo de que los empleados no lo utilicen y vuelvan a canales 
 <th>Comentarios</th>
 <td colspan="2">
 <div id="UC-0013-comments-html" class="remus_comments"><p>Facilita la organización y el control de la carga de trabajo entre los profesores y permite la colaboración entre ellos </p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0014">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0014</th>
+<th class="name_column" colspan="2">Conciliación de Pagos de Alumnos </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (05/12/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+<li>
+<a href="#STK-0004">Juan Manzano</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0014--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando El administrador accede a la pestaña "Pagos". Identifica una tarjeta en la columna "Pago Pendiente" (ej. Candela Rodriguez). Tras recibir la transferencia, arrastra la tarjeta a "Pago Recibido". Una vez tiene el justificante físico/digital, la mueve a la columna final "Pago Verificado (Justificante)".. </p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0014-precondition-html" class=""><p>El alumno debe tener una tarjeta creada en el Planner con su nombre completo.</p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0014-postcondition-html" class=""><p>El estado del pago del alumno queda actualizado y visible para el equipo administrativo.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">vital</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">validado</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0014-comments-html" class="remus_comments"><p>Ninguno</p></div>
+</td>
+</tr>
+</table>
+</div>
+<div id="UC-0015">
+<table class="use_case remus_table">
+<thead>
+<tr>
+<th>
+<img src="https://cdn.jsdelivr.net/gh/amador-duran-toro/remus/assets/images/icons/useCase.png" /> UC-0015</th>
+<th class="name_column" colspan="2">Registro de Nómina Docente </th>
+</tr>
+</thead>
+<tr>
+<th>Versión</th>
+<td colspan="2">1.0 (05/12/2025)
+</td>
+</tr>
+<tr>
+<th>Autores</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0004">Juan Manzano</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Fuentes</th>
+<td colspan="2">
+<ul class="stakeholders">
+<li>
+<a href="#STK-0001">Abie</a>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Descripción</th>
+<td colspan="2"><div id="UC-0015--html" class=""><p>El sistema deberá comportarse tal como se describe en el siguiente caso de uso cuando El administrador entra en la pestaña "Balance Contable". Selecciona la hoja "Gastos". Introduce una nueva fila con la fecha, el nombre del profesor (ej. Ariadna Gonzalez), el concepto "Mensual", las horas impartidas y el importe final en euros.. </p></div>
+</td>
+</tr>
+<tr>
+<th>Precondición</th>
+<td colspan="2">
+<div id="UC-0015-precondition-html" class=""><p>El archivo "Balance Contable.xlsx" debe existir en la carpeta Archivos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Postcondición</th>
+<td colspan="2">
+<div id="UC-0015-postcondition-html" class=""><p>El archivo "Balance Contable.xlsx" debe existir en la carpeta Archivos.</p></div>
+</td>
+</tr>
+<tr>
+<th>Importancia</th>
+<td colspan="2">importante</td>
+</tr>
+<tr>
+<th>Urgencia</th>
+<td colspan="2">inmediatamente</td>
+</tr>
+<tr>
+<th>Estado</th>
+<td colspan="2">pendiente de verificación</td>
+</tr>
+<tr>
+<th>Comentarios</th>
+<td colspan="2">
+<div id="UC-0015-comments-html" class="remus_comments"><p>Estructura de columnas basada en la hoja de cálculo actual.</p></div>
 </td>
 </tr>
 </table>
